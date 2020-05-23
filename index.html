@@ -1,113 +1,45 @@
 <!doctype html>
 <html lang="en-US">
 <head>
-  <title>A Website With No Name</title>
-  <style>
-    nav {
-      background-color:cyan;
-      margin-left:0;
-      padding:5px;
-      border:1px solid blue;
-      font-family:Lucida Console;
-      width: 65%;
-      text-align:center;
-    }
-    #home {
-      background-color: Fuchsia;
-    }
-    a {
-      padding:5px;
-    }
-    a:hover {
-      padding:5px;
-      background-color:red
-    }
-    body {
-      background-color:powderblue;
-      font-family: verdana;
-      font-size:2.5vw
-    }
-  </style>
+  <title>Makrall</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="A poorly drawn comic of nonsensical conversations">
+  <meta name="keywords" content="webcomic, makrall, tofuoreobellum">
+  <meta name="author" content="Shaun C-B">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="shortcut icon" href="scblogo.ico">
 </head>
 
+<!--Body of website-->
 <body>
-  <!--Test heading-->
-  <h1 id="top" style="font-size:45px; color:midnightblue; background-color:skyblue">
-    Heading that makes no sense</h1>
-  <h2 style="border:2px solid deeppink">I wonder what this will do</h2>
-  <h3 style="color:#4d0f00; background-color:coral">
-    Curiosity got the better of me</h3>
-  <h4>Has it killed the cat yet?</h4>
-  <h5>I wonder if this will be the same size as normal text</h5>
-  <hr>
-  <!--Navigation bar-->
-  <nav>
-      <a id="home" href="test.html">Home</a> -
-      <a href="/somewhere" title="Definitely not a blank page">
-        Somewhere</a> -
-      <a href="#bottom">Bottom of the page</a>
-  </nav>
-  <!--Text experimentation-->
-  <p>normal text I suppose</p>
-  <p><b><i>Aha this text is bold and italic</i></b></p>
-  <p><mark>and now there's highlight<sub>with subscript text</sub></mark></p>
-  <p><blockquote>random quote from something</blockquote></p>
-  <p style="color:red; font-family:verdana; font-size:200%;">
-    red text?</p>
-  <p style="color:darkgreen; text-align:center">green text?</p>
-  <!--More specialised formatting-->
-  <a href="https://www.youtube.com/watch?v=bkVg3z0bU7w"
-    title="Click for some stop motion I made">link?</a>
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/bkVg3z0bU7w"
-    frameborder="0" allow="accelerometer; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  <hr>
-  <button onclick="document.location='https://www.w3schools.com/html/html_links.asp'">
-    Don't click this</button>
-  <ol>
-    <li>an item</li>
-    <li>another item</li>
-    <li>frog (weren't expecting that aye?)</li>
-  </ol>
-  <button>
-    <ul>
-      <li>well this is interesting</li>
-      <li>I'm surprised this works</li>
-    </ul>
-  </button>
-  <br>
-  <img src="test_image.jpg" style="width:50%;border:1"
-    title="this company doesn't exist"
-    alt="This fish didn't write his code properly">
-  <pre>
-    What will this do
-    I have no idea
-    aparantly it just makes nicely formatted text
-  </pre>
-  <!--Random Table-->
-  <table style="width:100%; border:1px solid black; padding: 10px;">
-    <tr>
-        <th>Item 1</th>
-        <th>Item 2</th>
-        <th>Item 3</th>
-    </tr>
-    <tr>
-        <td>Random data</td>
-        <td>More random data</td>
-        <td>Look it's even more random data</td>
-    </tr>
+  <header class="content-box">
+    <div id="title-box" class="flex-container">
+      <div id="title">
+        <h1>Makrall</h1>
+      </div>
+      <div id="site-description">
+        <p>A poorly drawn comic of<br>nonsensical conversations</p>
+      </div>
+    </div>
+  </header>
 
-  </table>
+  <section class="content-box">
+    <div id="top-nav">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li> || </li>
+        <li><a href="archive.html">Archive</a></li>
+        <li> || </li>
+        <li><a href="projects.html">All Projects</a></li>
+        <li> || </li>
+        <li><a href="contact.html">About</a></li>
+    </div>
+  </section>
 
-  <address>
-    hey now you can contact me<br>
-    *number that you will never remember*<br>
-    98123 PO box<br>
-    penguin land
-  </address>
-  <br>
-  <a id="bottom" href="#top" title="why you so sceptical">Back to top</a>
-
-
-
+  <section class="content-box">
+    <div id="home-content">
+      <h2>Something will be in here eventually?</h2>
+    </div>
+  </section>
 </body>
-</html>
