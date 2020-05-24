@@ -22,7 +22,7 @@ body {
 }
 
 /*Title block styling////////////////////////////////////////////////////////*/
-#title-box {
+#header-box {
   margin-left: auto;
   margin-right: auto;
   height: 80px;
@@ -39,8 +39,8 @@ body {
 }
 #site-description {
   float:right;
-  padding-top: 25px;
-  padding-bottom: 15px;
+  padding-top: 24px;
+  padding-bottom: 16px;
 }
 #site-description p {
   margin: 0;
@@ -53,7 +53,7 @@ body {
   margin-right: auto;
   padding: 10px;
   height: 40px;
-  width: 395px;
+  width: 500px;
 }
 #top-nav ul {
   margin: 0;
@@ -79,4 +79,30 @@ body {
 #home-content {
   margin: 10px;
   height: 500px;
+}
+
+/*Media Queries//////////////////////////////////////////////////////////////*/
+@media (max-width: 720px) {
+  .content-box {
+    width: 100%;
+    min-width: 510px;
+  }
+}
+@media (max-width: 720px) {
+  #title, #site-description {
+    width: 100%;
+    min-width: 400px;
+    padding-top: 5px;
+    padding-bottom: 8px;
+  }
+}
+@media (max-width: 720px) {
+  #title h1, #site-description p {
+    text-align: center;
+  }
+}
+@media (max-width: 720px) {
+  #site-description br {
+    display: none;
+  }
 }
