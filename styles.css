@@ -21,16 +21,18 @@ body {
 }
 .sidebar {
   min-height: 100vh;
-  width: 25%;
+  width: 24%;
 }
 /*Speech bubbles*/
 .side-bubble {
-  width: 80%;
+  width: 85%;
   position: sticky;
 }
 #center-column {
-  width:50%;
-  min-width: 510px;
+  padding-left: 7px;
+  padding-right: 7px;
+  width:52%;
+  min-width: 520px;
 }
 #left-column img{
   top:100px;
@@ -128,6 +130,7 @@ body {
   color: inherit;
   margin-left: 5px;
   margin-right: 5px;
+  cursor: default;
 }
 #top-nav a {
   display: block;
@@ -172,7 +175,7 @@ body {
     display: none;
   }
 }
-@media (max-width: 1000px) {
+@media (max-width: 720px) {
   .side-bubble {
     display: none;
   }
