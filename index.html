@@ -8,7 +8,7 @@
   <meta name="keywords" content="webcomic, makrall, tofuoreobellum">
   <meta name="author" content="Shaun C-B">
   <link rel="stylesheet" href="styles.css">
-  <link rel="shortcut icon" href="scblogo.ico">
+  <!--<link rel="shortcut icon" href="scblogo.ico">-->
 </head>
 
 <!--Body of website-->
@@ -46,6 +46,9 @@
 
       <!--Main content box-->
       <section class="content-box">
+        <img id="toggle-button" src="ui_images/toggle_black.png" alt="dark mode toggle"
+          onclick="darkToggle()" title="Click to toggle dark mode">
+        <div id="comic-nav">
         <div id="home-content">
           <h2>Something will be in here eventually?</h2>
         </div>
@@ -54,4 +57,33 @@
     <div id="left-column" class="sidebar" style="order: 1"><img src="ui_images/speech_bubble.png" alt="speech bubble" class="side-bubble"></div>
     <div id="right-column" class="sidebar" style="order: 3"><img src="ui_images/speech_bubble.png" alt="speech bubble" class="side-bubble"></div>
   </div>
+
+  <!--Dark mode script-->
+  <script>
+    var state= "light";
+    function darkToggle() {
+      document.body.classList.toggle("dark-background");
+
+      var boxes = document.getElementsByClassName("content-box");
+      for(item of boxes) {
+        item.classList.toggle("dark-content-box");
+      }
+      var bubbles = document.getElementsByClassName("side-bubble");
+      for(item of bubbles) {
+        if(state=="light") {
+          item.src = "ui_images/speech_bubble_dark.png";
+        } else {
+          item.src = "ui_images/speech_bubble.png";
+        }
+      }
+      if(state == "light") {
+        document.getElementById("toggle-button").src = "ui_images/toggle_white.png"
+        state = "dark";
+      } else {
+        document.getElementById("toggle-button").src = "ui_images/toggle_black.png"
+        state = "light";
+      }
+
+    }
+  </script>
 </body>
