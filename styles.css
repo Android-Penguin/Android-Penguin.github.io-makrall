@@ -16,11 +16,11 @@ body {
   display: flex;
   flex-flow: row nowrap;
 }
+/*Speech bubbles*/
 .sidebar {
   min-height: 100vh;
   width: 24%;
 }
-/*Speech bubbles*/
 .side-bubble {
   width: 85%;
   position: sticky;
@@ -111,7 +111,7 @@ body {
   margin-right: auto;
   padding: 10px;
   height: 40px;
-  width: 500px;
+  width: 504px;
   color: inherit;
 }
 #top-nav ul {
@@ -143,6 +143,21 @@ body {
   text-shadow: 0px 0px 8px #52B1CF;
 }
 /*Main body content styling//////////////////////////////////////////////////////////*/
+/*Comic nav*/
+#comic-nav {
+  margin-left: 40px;
+  justify-content: center;
+  align-items: center;
+}
+#comic-nav > div {
+  background-color: #f1f1f1;
+  width: auto;
+  margin: 10px;
+  text-align: center;
+  line-height: 75px;
+  font-size: 20px;
+}
+
 #home-content {
   margin: 10px;
   height: 5000px;
