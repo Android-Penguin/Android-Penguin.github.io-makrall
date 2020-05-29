@@ -173,11 +173,24 @@ body {
   border-radius: 100%;
   box-shadow: 0px 0px 20px #2E5CB9;
 }
-
-#home-content {
+/* Comic */
+#comic-container {
+  padding: 10px 30px 30px 30px;
+  height: 70vh;
+  width: auto;
+}
+#temp-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  max-height: 100%;
+  max-width: 100%;
+  border-style: solid;
+}
+/* Text */
+#text {
   text-align: center;
-  margin: 10px;
-  height: 5000px;
+  padding: 0 30px 30px 30px;
 }
 
 /*Media Queries//////////////////////////////////////////////////////////////*/
