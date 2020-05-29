@@ -104,14 +104,14 @@
         setComic();
       }
     }
-    
+
     function setComic() {
-      const title = comic_list[current_comic].title;
       const image = comic_list[current_comic].filepath;
       const hoverText = comic_list[current_comic].hoverText;
-      document.getElementById("comic-title").innerHTML = title;
+      const title = comic_list[current_comic].title;
       document.getElementById("comic-img").src = image;
       document.getElementById("comic-img").title = hoverText;
+      document.getElementById("comic-title").innerHTML = title;
     }
   </script>
 
