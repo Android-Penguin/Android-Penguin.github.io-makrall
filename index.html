@@ -12,7 +12,7 @@
 </head>
 
 <!--Body of website-->
-<body>
+<body onload="comicLatest()">
   <div class="flex-container">
     <div id="center-column" style="order: 2">
       <!--Title box-->
@@ -50,28 +50,70 @@
           onclick="darkToggle()" title="Click to toggle dark mode">
 
         <div id="comic-nav" class="flex-container">
-          <div class="img-invert"><img src="ui_images/button_skip.png" alt="First" class="comic-skip"></div>
-          <div class="img-invert"><img src="ui_images/button_index.png" alt="Previous" class="comic-index"></div>
-          <div>Temporary</div>
-          <div><img src="ui_images/button_index.png" alt="Next" class="comic-index"></div>
-          <div><img src="ui_images/button_skip.png" alt="Latest" class="comic-skip"></div>
+          <div class="img-invert"><img src="ui_images/button_skip.png" alt="First"
+            class="comic-skip" onclick="comicFirst()"></div>
+          <div class="img-invert"><img src="ui_images/button_index.png" alt="Previous"
+            class="comic-index" onclick="comicPrevious()"></div>
+          <div><p id="comic-title">If you are reading this, please
+            <a href="contact.html">contact</a> the dev, it seems something is broken</p></div>
+          <div><img src="ui_images/button_index.png" alt="Next"
+            class="comic-index" onclick="comicNext()"></div>
+          <div><img src="ui_images/button_skip.png" alt="Latest"
+            class="comic-skip" onclick="comicLatest()"></div>
         </div>
 
         <div id="comic-container">
-          <img id="temp-image" src="comics/comic_teaser.png" alt="comic">
+          <img id="comic-img" src="comics/comic_teaser.png" alt="comic">
         </div>
 
         <div id=text>
-          <h4>Explanation</h4>
-          <p>Temporary image of what's to come while I figure out how to make the navigation work.
-            These 4 comics will be availible as soon as the back end of this website exists and
-            more will be added in the coming weeks as I (hopefully) get around to drawing them.</p>
+          <h4>Welcome to Makrall</h4>
+          <p>I was origanally going to add an explanation to each comic, but that would defeat
+            the purpose of having unexplainable nonsense (Definitely not because I'm too lazy
+            to write them). More comics will be added in the coming weeks as I (hopefully)
+            get around to drawing them.</p>
         </div>
       </section>
     </div>
     <div id="left-column" class="sidebar" style="order: 1"><img src="ui_images/speech_bubble.png" alt="speech bubble" class="side-bubble"></div>
     <div id="right-column" class="sidebar" style="order: 3"><img src="ui_images/speech_bubble.png" alt="speech bubble" class="side-bubble"></div>
   </div>
+
+  <!-- Comic switching -->
+  <script src="comic_list.js"></script>
+  <script>
+    var current_comic = comic_list.length-1;
+
+    function comicLatest() {
+      current_comic = comic_list.length-1;
+      setComic();
+    }
+    function comicFirst() {
+      current_comic = 0;
+      setComic();
+    }
+    function comicNext() {
+      if(current_comic < comic_list.length-1) {
+        current_comic ++;
+        setComic();
+      }
+    }
+    function comicPrevious() {
+      if(current_comic > 0) {
+        current_comic --;
+        setComic();
+      }
+    }
+    
+    function setComic() {
+      const title = comic_list[current_comic].title;
+      const image = comic_list[current_comic].filepath;
+      const hoverText = comic_list[current_comic].hoverText;
+      document.getElementById("comic-title").innerHTML = title;
+      document.getElementById("comic-img").src = image;
+      document.getElementById("comic-img").title = hoverText;
+    }
+  </script>
 
   <!--Dark mode script-->
   <script>

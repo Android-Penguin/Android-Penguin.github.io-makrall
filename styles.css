@@ -175,22 +175,22 @@ body {
 }
 /* Comic */
 #comic-container {
-  padding: 10px 30px 30px 30px;
-  height: 70vh;
+  padding: 10px 20px 20px 20px;
+  height: auto;
   width: auto;
 }
-#temp-image {
+#comic-img {
   display: block;
   margin-left: auto;
   margin-right: auto;
   max-height: 100%;
-  max-width: 100%;
+  width: 100%;
   border-style: solid;
 }
 /* Text */
 #text {
   text-align: center;
-  padding: 0 30px 30px 30px;
+  padding: 0 20px 30px 30px;
 }
 
 /*Media Queries//////////////////////////////////////////////////////////////*/
