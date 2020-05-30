@@ -12,7 +12,7 @@
 </head>
 
 <!--Body of website-->
-<body onload="comicLatest()">
+<body onload="initialize()">
   <div class="flex-container">
     <div id="center-column" style="order: 2">
       <!--Title box-->
@@ -54,7 +54,7 @@
             class="comic-skip" onclick="comicFirst()"></div>
           <div class="img-invert"><img src="ui_images/button_index.png" alt="Previous"
             class="comic-index" onclick="comicPrevious()"></div>
-          <div><p id="comic-title">If you are reading this, please
+          <div id="comic-title-box"><p id="comic-title">If you are reading this, please
             <a href="contact.html">contact</a> the dev, it seems something is broken</p></div>
           <div><img src="ui_images/button_index.png" alt="Next"
             class="comic-index" onclick="comicNext()"></div>
@@ -78,6 +78,18 @@
     <div id="left-column" class="sidebar" style="order: 1"><img src="ui_images/speech_bubble.png" alt="speech bubble" class="side-bubble"></div>
     <div id="right-column" class="sidebar" style="order: 3"><img src="ui_images/speech_bubble.png" alt="speech bubble" class="side-bubble"></div>
   </div>
+  
+  <!-- Initialize -->
+  <script>
+    function initialize() {
+        storage = window.localStorage;
+        if(storage.getItem("makrallDarkState") == "dark") {
+          darkToggle();
+        }
+
+        comicLatest();
+    }
+  </script>
 
   <!-- Comic switching -->
   <script src="comic_list.js"></script>
@@ -161,7 +173,7 @@
         document.getElementById("toggle-button").src = "ui_images/toggle_black.png"
         state = "light";
       }
-
+      storage.setItem("makrallDarkState", state);
     }
   </script>
 </body>

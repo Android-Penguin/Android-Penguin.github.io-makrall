@@ -157,6 +157,9 @@ body {
   text-align: center;
   font-size: 20px;
 }
+#comic-title {
+  width: 200px;
+}
 #comic-nav img {
   width: 45px;
   border-radius: 100%;

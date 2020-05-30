@@ -12,7 +12,7 @@
 </head>
 
 <!--Body of website-->
-<body>
+<body onload="initialize()">
   <div class="flex-container">
     <div id="center-column" style="order: 2">
       <!--Title box-->
@@ -58,6 +58,16 @@
     <div id="right-column" class="sidebar" style="order: 3"><img src="ui_images/speech_bubble.png" alt="speech bubble" class="side-bubble"></div>
   </div>
 
+  <!-- Initialize -->
+  <script>
+    function initialize() {
+        storage = window.localStorage;
+        if(storage.getItem("makrallDarkState") == "dark") {
+          darkToggle();
+        }
+    }
+  </script>
+
   <!--Dark mode script-->
   <script>
     var state= "light";
@@ -83,7 +93,7 @@
         document.getElementById("toggle-button").src = "ui_images/toggle_black.png"
         state = "light";
       }
-
+      storage.setItem("makrallDarkState", state);
     }
   </script>
 </body>
