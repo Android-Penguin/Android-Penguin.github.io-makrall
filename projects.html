@@ -50,31 +50,43 @@
           onclick="darkToggle()" title="Click to toggle dark mode">
 
         <div class="project-title">
-          <img src="ui_images/button_index.png" alt="Dropdown"
-          class="div-dropdown" onclick="expandDiv(project1)">
+          <img id="p1button" src="ui_images/button_index.png" alt="Dropdown"
+          class="div-dropdown" onclick="expandDiv(project1, p1button)">
           <h1>Title of project <span id="instructions">(click arrow to expand)<span></h1></div>
         <div id="project1" class="project-description hidden">
           <p>Contents that disapear when button is clicked</p>
+          <p>lines</p>
+          <p>lines</p>
+          <p>more lines</p>
+          <p>who would have guessed, even more lines</p>
         </div>
       </section>
 
       <section class="content-box">
         <div class="project-title">
-          <img src="ui_images/button_index.png" alt="Dropdown"
-          class="div-dropdown" onclick="expandDiv(project2)">
+          <img id="p2button" src="ui_images/button_index.png" alt="Dropdown"
+          class="div-dropdown" onclick="expandDiv(project2, p2button)">
           <h1>Title of project</h1></div>
         <div id="project2" class="project-description hidden">
           <p>Contents that disapear when button is clicked</p>
+          <p>lines</p>
+          <p>lines</p>
+          <p>more lines</p>
+          <p>who would have guessed, even more lines</p>
         </div>
       </section>
 
       <section class="content-box">
         <div class="project-title">
-          <img src="ui_images/button_index.png" alt="Dropdown"
-          class="div-dropdown" onclick="expandDiv(project3)">
+          <img id="p3button" src="ui_images/button_index.png" alt="Dropdown"
+          class="div-dropdown" onclick="expandDiv(project3, p3button)">
           <h1>Title of project</h1></div>
         <div id="project3" class="project-description hidden">
           <p>Contents that disapear when button is clicked</p>
+          <p>lines</p>
+          <p>lines</p>
+          <p>more lines</p>
+          <p>who would have guessed, even more lines</p>
         </div>
       </section>
 
@@ -95,8 +107,10 @@
 
   <!-- Expand divs -->
   <script>
-    function expandDiv(selectedDiv) {
-      selectedDiv.classList.toggle("hidden")
+    function expandDiv(selectedDiv, selectedButton) {
+      selectedDiv.classList.toggle("hidden");
+      selectedDiv.classList.toggle("expand-animation");
+      selectedButton.classList.toggle("rotate-animation");
       document.getElementById("instructions").classList.add("hidden");
     }
   </script>

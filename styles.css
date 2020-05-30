@@ -236,12 +236,30 @@ body {
   border-radius: 100%;
   box-shadow: 0px 0px 20px #2E5CB9;
 }
+.rotate-animation {
+  animation-name: rotate90;
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+}
+@keyframes rotate90 {
+  from{transform: rotate(0deg);}
+  to{transform: rotate(90deg);}
+}
 .project-description {
   padding: 14px 10px 10px 10px;
   height:200px;
 }
 .hidden {
   display: none;
+}
+.expand-animation {
+  overflow: hidden;
+  animation-name: expand;
+  animation-duration: 0.5s;
+}
+@keyframes expand {
+  from{height:1px; visibility: none;}
+  to{height:200px; visibility: visible;}
 }
 /*All--------------------------------------------------*/
 /* Text */
