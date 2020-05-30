@@ -49,10 +49,35 @@
         <img id="toggle-button" src="ui_images/toggle_black.png" alt="dark mode toggle"
           onclick="darkToggle()" title="Click to toggle dark mode">
 
-        <div id="home-content">
-          <h2>Digital art by Makrall?</h2>
+        <div class="project-title">
+          <img src="ui_images/button_index.png" alt="Dropdown"
+          class="div-dropdown" onclick="expandDiv(project1)">
+          <h1>Title of project <span id="instructions">(click arrow to expand)<span></h1></div>
+        <div id="project1" class="project-description hidden">
+          <p>Contents that disapear when button is clicked</p>
         </div>
       </section>
+
+      <section class="content-box">
+        <div class="project-title">
+          <img src="ui_images/button_index.png" alt="Dropdown"
+          class="div-dropdown" onclick="expandDiv(project2)">
+          <h1>Title of project</h1></div>
+        <div id="project2" class="project-description hidden">
+          <p>Contents that disapear when button is clicked</p>
+        </div>
+      </section>
+
+      <section class="content-box">
+        <div class="project-title">
+          <img src="ui_images/button_index.png" alt="Dropdown"
+          class="div-dropdown" onclick="expandDiv(project3)">
+          <h1>Title of project</h1></div>
+        <div id="project3" class="project-description hidden">
+          <p>Contents that disapear when button is clicked</p>
+        </div>
+      </section>
+
     </div>
     <div id="left-column" class="sidebar" style="order: 1"><img src="ui_images/speech_bubble.png" alt="speech bubble" class="side-bubble"></div>
     <div id="right-column" class="sidebar" style="order: 3"><img src="ui_images/speech_bubble.png" alt="speech bubble" class="side-bubble"></div>
@@ -68,11 +93,30 @@
     }
   </script>
 
+  <!-- Expand divs -->
+  <script>
+    function expandDiv(selectedDiv) {
+      selectedDiv.classList.toggle("hidden")
+      document.getElementById("instructions").classList.add("hidden");
+    }
+  </script>
+
   <!--Dark mode script-->
   <script>
     var state= "light";
     function darkToggle() {
       document.body.classList.toggle("dark-background");
+
+      //Project dropdown buttons
+      var indexIcons = document.getElementsByClassName("div-dropdown");
+      for (item of indexIcons) {
+        item.classList.toggle("dark-hover");
+        if(state=="light") {
+          item.src = "ui_images/button_index_dark.png";
+        } else {
+          item.src = "ui_images/button_index.png";
+        }
+      }
 
       var boxes = document.getElementsByClassName("content-box");
       for(item of boxes) {

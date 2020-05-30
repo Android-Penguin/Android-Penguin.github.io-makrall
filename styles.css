@@ -210,14 +210,46 @@ body {
 #comic-list a:hover {
   text-decoration: underline;
 }
-
+/*Projects---------------------------------------------*/
+.project-title {
+  padding: 14px 10px 10px 10px;
+  height:60px;
+}
+.project-title h1 {
+  margin: 0;
+}
+.project-title span {
+  font-size: 12px;
+}
+.project-title img {
+  float:left;
+  margin-right: 8px;
+  width: 34.4px;
+  border-radius: 100%;
+}
+.project-title img:hover {
+  border-radius: 100%;
+  cursor: pointer;
+  box-shadow: 0px 0px 9px #52B1CF;
+}
+.project-title .dark-hover:hover {
+  border-radius: 100%;
+  box-shadow: 0px 0px 20px #2E5CB9;
+}
+.project-description {
+  padding: 14px 10px 10px 10px;
+  height:200px;
+}
+.hidden {
+  display: none;
+}
 /*All--------------------------------------------------*/
 /* Text */
 #text {
   text-align: center;
   padding: 0 30px 20px 30px;
 }
-#text h1 {
+h1 {
   font-size: 30px;
 }
 
