@@ -49,8 +49,12 @@
         <img id="toggle-button" src="ui_images/toggle_black.png" alt="dark mode toggle"
           onclick="darkToggle()" title="Click to toggle dark mode">
 
-        <div id="home-content">
-          <h2>List of all comics</h2>
+        <div id="text">
+          <h1>&nbsp;&nbsp;&nbsp; All Comics:</h1>
+          <p>(Hover mouse over title to view date drawn)</p>
+          <ul id="comic-list">
+
+          <ul>
         </div>
       </section>
     </div>
@@ -65,6 +69,23 @@
         if(storage.getItem("makrallDarkState") == "dark") {
           darkToggle();
         }
+    }
+  </script>
+
+  <!-- Create list -->
+  <script src="comic_list.js"></script>
+  <script>
+    var i;
+    for(i=comic_list.length-1; i>-1; i--) {
+      var li = document.createElement("li");
+      var a = document.createElement("a");
+      a.title = comic_list[i].date;
+      a.href = "index.html?id="+i;
+      li.appendChild(a);
+      var text = document.createTextNode(comic_list[i].title);
+      a.appendChild(text);
+      var container = document.getElementById("comic-list");
+      container.appendChild(li);
     }
   </script>
 

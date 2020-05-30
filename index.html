@@ -78,23 +78,30 @@
     <div id="left-column" class="sidebar" style="order: 1"><img src="ui_images/speech_bubble.png" alt="speech bubble" class="side-bubble"></div>
     <div id="right-column" class="sidebar" style="order: 3"><img src="ui_images/speech_bubble.png" alt="speech bubble" class="side-bubble"></div>
   </div>
-  
+
   <!-- Initialize -->
+  <script src="comic_list.js"></script>
   <script>
+    var current_comic;
     function initialize() {
+        /*Dark state*/
         storage = window.localStorage;
         if(storage.getItem("makrallDarkState") == "dark") {
           darkToggle();
         }
-
-        comicLatest();
+        /*Comic set*/
+        const params = new URLSearchParams(window.location.search);
+        if(params.has('id')) {
+          current_comic = parseInt(params.get('id'));
+        } else {
+          current_comic = comic_list.length-1;
+        }
+        setComic();
     }
   </script>
 
   <!-- Comic switching -->
-  <script src="comic_list.js"></script>
   <script>
-    var current_comic = comic_list.length-1;
 
     function comicLatest() {
       current_comic = comic_list.length-1;

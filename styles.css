@@ -4,9 +4,10 @@
   font-family: "Helvetica", "sans-serif";
 }
 body {
+  margin: 0;
+  overflow-y: scroll;
   background-color: #52B1CF;
   color: black;
-  margin: 0;
 }
 .dark-background {
   background-color: #2E5CB9;
@@ -143,6 +144,7 @@ body {
   text-shadow: 0px 0px 8px #52B1CF;
 }
 /*Main body content styling//////////////////////////////////////////////////////////*/
+/*Home page------------------------------------------*/
 /*Comic nav*/
 #comic-nav {
   margin-left: 40px;
@@ -170,6 +172,7 @@ body {
 }
 #comic-nav img:hover {
   border-radius: 100%;
+  cursor: pointer;
   box-shadow: 0px 0px 9px #52B1CF;
 }
 #comic-nav .dark-hover:hover {
@@ -190,10 +193,32 @@ body {
   width: 100%;
   border-style: solid;
 }
+/*Archive----------------------------------------------*/
+#comic-list {
+  padding: 0.00000001px;
+  list-style-type: none;
+  line-height: 30px;
+}
+#comic-list li {
+  padding: none;
+}
+#comic-list a {
+  text-decoration: none;
+  font-weight: bold;
+  color:inherit;
+}
+#comic-list a:hover {
+  text-decoration: underline;
+}
+
+/*All--------------------------------------------------*/
 /* Text */
 #text {
   text-align: center;
-  padding: 0 20px 30px 30px;
+  padding: 0 30px 20px 30px;
+}
+#text h1 {
+  font-size: 30px;
 }
 
 /*Media Queries//////////////////////////////////////////////////////////////*/
