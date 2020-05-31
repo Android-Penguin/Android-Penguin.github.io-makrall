@@ -270,6 +270,7 @@ body {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
+  align-items: center;
 }
 #project2.hidden {
   display: none;
@@ -278,19 +279,56 @@ body {
   width: 100%;
 }
 #project2 > div {
-  height:220px;
+  height: auto;
   width: 220px;
   margin: 10px;
   text-align: center;
 }
-#project2 > div:hover{
-  border-style: solid;
-}
 #project2 img {
-  height: 100%;
+  width: 100%;
+}
+#project2 img:hover{
+  border-style: solid;
+  border-width: 1.5px;
 }
 /* Project 3 - Art*/
 /*All--------------------------------------------------*/
+/* Modal */
+#modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  padding: 40px 40px 40px 80px;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  text-align: center;
+  background-color: rgba(0,0,0,0.8);
+}
+#modal-img-container {
+  display: inline-flex;
+  align-items: flex-start;
+  margin: 0px auto;
+  width: auto;
+  height: 100%;
+  /* background-color: grey; */
+}
+#modal-img {
+  object-fit: scale-down;
+  max-height: 100%;
+  max-width: 100%;
+}
+#modal-close {
+  margin: 5px;
+  height: 30px;
+  width: 30px;
+}
+#modal-close:hover {
+  border-radius: 100%;
+  box-shadow: 0px 0px 4px white;
+}
 /* Text */
 #text {
   text-align: center;

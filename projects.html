@@ -68,7 +68,7 @@
           class="div-dropdown" onclick="expandDiv(project2, p2button)">
           <h1>We Dem Kois</h1></div>
         <div id="project2" class="project-description hidden">
-          <p>Author: Cameron</p>
+          <p>Creator: Cameron H</p>
           <br>
           <!-- Items inserted by script -->
         </div>
@@ -87,6 +87,13 @@
           <p>who would have guessed, even more lines</p>
         </div>
       </section>
+
+      <div id="modal" onclick="modalClose()">
+        <div id="modal-img-container">
+          <img id="modal-img" src="we_dem_kois/01_bath_oat.png" alt="Opened Image">
+          <img id="modal-close" src="ui_images/button_close.png" alt="close" onclick="modalClose()">
+        </div>
+      </div>
 
     </div>
     <div id="left-column" class="sidebar" style="order: 1"><img src="ui_images/speech_bubble.png" alt="speech bubble" class="side-bubble"></div>
@@ -122,7 +129,11 @@
   <!-- Modal Box -->
   <script>
     function modalOpen(selectedItem) {
-      window.alert("Sorry, opening items is currently unavailable");
+      document.getElementById("modal").style.display = "block";
+      document.getElementById("modal-img").src = selectedItem;
+    }
+    function modalClose() {
+      document.getElementById("modal").style.display = "none";
     }
   </script>
   <!-- Expand divs -->
