@@ -263,7 +263,7 @@ body {
 }
 @keyframes expand {
   from {max-height:1px; visibility: none;}
-  to {max-height:200vh; visibility: visible;}
+  to {max-height:320vh; visibility: visible;}
 }
 
 /* Project 1 - Makrall Comic */
