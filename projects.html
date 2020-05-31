@@ -49,10 +49,10 @@
         <img id="toggle-button" src="ui_images/toggle_black.png" alt="dark mode toggle"
           onclick="darkToggle()" title="Click to toggle dark mode">
 
-        <div class="project-title">
+        <div class="project-title"> <!-- Makrall Comic -->
           <img id="p1button" src="ui_images/button_index.png" alt="Dropdown"
           class="div-dropdown" onclick="expandDiv(project1, p1button)">
-          <h1>Title of project <span id="instructions">(click arrow to expand)<span></h1></div>
+          <h1>Makrall Comic <span id="instructions">(click arrow to expand)<span></h1></div>
         <div id="project1" class="project-description hidden">
           <p>Contents that disapear when button is clicked</p>
           <p>lines</p>
@@ -63,24 +63,22 @@
       </section>
 
       <section class="content-box">
-        <div class="project-title">
+        <div class="project-title"> <!-- We Dem Kois -->
           <img id="p2button" src="ui_images/button_index.png" alt="Dropdown"
           class="div-dropdown" onclick="expandDiv(project2, p2button)">
-          <h1>Title of project</h1></div>
+          <h1>We Dem Kois</h1></div>
         <div id="project2" class="project-description hidden">
-          <p>Contents that disapear when button is clicked</p>
-          <p>lines</p>
-          <p>lines</p>
-          <p>more lines</p>
-          <p>who would have guessed, even more lines</p>
+          <p>Author: Cameron</p>
+          <br>
+          <!-- Items inserted by script -->
         </div>
       </section>
 
       <section class="content-box">
-        <div class="project-title">
+        <div class="project-title"> <!-- Art -->
           <img id="p3button" src="ui_images/button_index.png" alt="Dropdown"
           class="div-dropdown" onclick="expandDiv(project3, p3button)">
-          <h1>Title of project</h1></div>
+          <h1>Digital Art</h1></div>
         <div id="project3" class="project-description hidden">
           <p>Contents that disapear when button is clicked</p>
           <p>lines</p>
@@ -105,6 +103,28 @@
     }
   </script>
 
+  <!-- Create picture divs -->
+  <script src="album_list.js"></script>
+  <script>
+    for(item of album_list) {
+      var div = document.createElement("div");
+      var img = document.createElement("img");
+      img.src = item.filepath;
+      img.alt = item.name;
+      img.title = item.name;
+      img.id = item.id;
+      img.setAttribute('onclick', item.onclick);
+      div.appendChild(img);
+      var container = document.getElementById("project2");
+      container.appendChild(div);
+    }
+  </script>
+  <!-- Modal Box -->
+  <script>
+    function modalOpen(selectedItem) {
+      window.alert("Sorry, opening items is currently unavailable");
+    }
+  </script>
   <!-- Expand divs -->
   <script>
     function expandDiv(selectedDiv, selectedButton) {

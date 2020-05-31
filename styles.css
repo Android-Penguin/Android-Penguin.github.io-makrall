@@ -246,8 +246,9 @@ body {
   to{transform: rotate(90deg);}
 }
 .project-description {
-  padding: 14px 10px 10px 10px;
-  height:200px;
+  padding: 0px 10px 10px 10px;
+  height:auto;
+  resize: vertical;
 }
 .hidden {
   display: none;
@@ -255,12 +256,40 @@ body {
 .expand-animation {
   overflow: hidden;
   animation-name: expand;
+  animation-timing-function: ease-in;
   animation-duration: 0.5s;
+  animation-fill-mode: both;
 }
 @keyframes expand {
-  from{height:1px; visibility: none;}
-  to{height:200px; visibility: visible;}
+  from {max-height:1px; visibility: none;}
+  to {max-height:200vh; visibility: visible;}
 }
+/* Project 1 - Makrall Comic */
+/* Project 2 - We Dem Kois Albums*/
+#project2 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+#project2.hidden {
+  display: none;
+}
+#project2 p {
+  width: 100%;
+}
+#project2 > div {
+  height:220px;
+  width: 220px;
+  margin: 10px;
+  text-align: center;
+}
+#project2 > div:hover{
+  border-style: solid;
+}
+#project2 img {
+  height: 100%;
+}
+/* Project 3 - Art*/
 /*All--------------------------------------------------*/
 /* Text */
 #text {

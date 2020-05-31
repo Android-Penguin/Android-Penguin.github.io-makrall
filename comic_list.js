@@ -10,4 +10,4 @@ var comic_list = [
 
   {"filepath":"comics/comic_04.png", "title":"Iced Animals", "date":"17/04/20",
     "hoverText":"I imagined them as animal shaped ice blocks"}
-]
+];
