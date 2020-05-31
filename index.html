@@ -54,8 +54,7 @@
             class="comic-skip" onclick="comicFirst()"></div>
           <div class="img-invert"><img src="ui_images/button_index.png" alt="Previous"
             class="comic-index" onclick="comicPrevious()"></div>
-          <div id="comic-title-box"><p id="comic-title">If you are reading this, please
-            <a href="contact.html">contact</a> the dev, it seems something is broken</p></div>
+          <div id="comic-title-box"><p id="comic-title"></p></div>
           <div><img src="ui_images/button_index.png" alt="Next"
             class="comic-index" onclick="comicNext()"></div>
           <div><img src="ui_images/button_skip.png" alt="Latest"
@@ -63,7 +62,7 @@
         </div>
 
         <div id="comic-container">
-          <img id="comic-img" src="comics/comic_teaser.png" alt="comic">
+          <img id="comic-img" src="comics/comic_placeholder.png" alt="comic">
         </div>
 
         <div id=text>
@@ -92,11 +91,20 @@
         /*Comic set*/
         const params = new URLSearchParams(window.location.search);
         if(params.has('id')) {
-          current_comic = parseInt(params.get('id'));
+          if(parseInt(params.get('id'))>-1 && parseInt(params.get('id'))<comic_list.length) {
+            current_comic = parseInt(params.get('id'));
+          } else if(parseInt(params.get('id')) != blank) {
+            current_comic = comic_list.length-1;
+          }
         } else {
           current_comic = comic_list.length-1;
         }
-        setComic();
+        if(params.has('text')) {
+          window.alert("Click home to reset comic");
+          document.getElementById("comic-title").innerHTML = params.get('text');
+        } else {
+          setComic();
+        }
     }
   </script>
 
