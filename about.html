@@ -49,8 +49,63 @@
         <img id="toggle-button" src="ui_images/toggle_black.png" alt="dark mode toggle"
           onclick="darkToggle()" title="Click to toggle dark mode">
 
-        <div id="home-content">
-          <h2>About the people in Makrall</h2>
+        <div id="text" class="about-text">
+          <h1>What is Makrall?</h1>
+          <p>Makrall began as a simple group chat on Instagram. Over time,
+            sections of conversation were collected as screenshots, many of which becoming
+            slightly humerous without any context. From there, the idea was born
+            to illustrate these snippets as comics with an art style similar to that
+            of <a href="https://xkcd.com/" target="_blank">xkcd.com</a>.
+            The Makrall website was then created for a school project to showcase
+            the comics, as well other projects done by the group.</p>
+            <p>Since then, the origanal cast of Makrall has migrated to TofuOreobellum,
+              (a Discord group chat) absorbing a few new members in the process.
+              Fortunately, there still remains a backlog of screenshots from Instagram, which
+              will be converted into comic form sometime in the near future.</p>
+
+            <h1>Meet the cast</h1>
+            <div id="cast-container">
+              <div class="cast-img">
+                <img id="picshaun" src="character_pics/shaun1.png" alt="Shaun"
+                  onmouseover="changePic(picshaun, 'character_pics/shaun2.png')"
+                  onmouseleave="changePic(picshaun, 'character_pics/shaun1.png')">
+              </div>
+              <div class="cast-description">
+                <p>Name: Shaun | AKA: Seen, Android-Penguin</p>
+                <p>Projects: Makrall Comic, Website</p>
+                <p>Bio?</p>
+              </div>
+              <div class="cast-img">
+                <img id="piccameron" src="character_pics/cameron1.png" alt="Cameron"
+                  onmouseover="changePic(piccameron, 'character_pics/cameron2.png')"
+                  onmouseleave="changePic(piccameron, 'character_pics/cameron1.png')">
+              </div>
+              <div class="cast-description">
+                <p>Name: Cameron | AKA: Corn, Cateron, Ginger</p>
+                <p>Projects: We Dem Kois</p>
+                <p>Bio?</p>
+              </div>
+              <div class="cast-img">
+                <img id="picemily" src="character_pics/emily1.png" alt="Emily"
+                  onmouseover="changePic(picemily, 'character_pics/emily2.png')"
+                  onmouseleave="changePic(picemily, 'character_pics/emily1.png')">
+              </div>
+              <div class="cast-description">
+                <p>Name: Emily | AKA: Email, Empty Freezer</p>
+                <p>Projects: Digital Art</p>
+                <p>Bio?</p>
+              </div>
+              <div class="cast-img">
+                <img id="picclement" src="character_pics/clement1.png" alt="Clement"
+                  onmouseover="changePic(picclement, 'character_pics/clement2.png')"
+                  onmouseleave="changePic(picclement, 'character_pics/clement1.png')">
+              </div>
+              <div class="cast-description">
+                <p>Name: Clement | AKA: Cement</p>
+                <p>Projects: None (Yet)</p>
+                <p>Bio?</p>
+              </div>
+            </div>
         </div>
       </section>
     </div>
@@ -68,6 +123,13 @@
     }
   </script>
 
+  <!-- Change pic -->
+  <script>
+    function changePic(picID, source) {
+      picID.src = source;
+    }
+  </script>
+
   <!--Dark mode script-->
   <script>
     var state= "light";
@@ -77,6 +139,10 @@
       var boxes = document.getElementsByClassName("content-box");
       for(item of boxes) {
         item.classList.toggle("dark-content-box");
+      }
+      var characters = document.getElementsByClassName("cast-img");
+      for(item of characters) {
+        item.classList.toggle("img-dark");
       }
       var bubbles = document.getElementsByClassName("side-bubble");
       for(item of bubbles) {

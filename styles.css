@@ -1,4 +1,4 @@
-/*Full document styles///////////////////////////////////////////////////////*/
+/* Full document styles ///////////////////////////////////////////////////////*/
 * {
   box-sizing: border-box;
   font-family: "Helvetica", "sans-serif";
@@ -12,12 +12,12 @@ body {
 .dark-background {
   background-color: #2E5CB9;
 }
-/*Flex*/
+/* Flex */
 .flex-container {
   display: flex;
   flex-flow: row nowrap;
 }
-/*Speech bubbles*/
+/* Speech bubbles */
 .sidebar {
   min-height: 100vh;
   width: 24%;
@@ -56,7 +56,7 @@ body {
   width: 4.8%;
 }
 
-/*Syling of content boxes////////////////////////////////////////////////////*/
+/* Syling of content boxes ////////////////////////////////////////////////////*/
 .content-box {
   margin-left: auto;
   margin-right: auto;
@@ -80,7 +80,7 @@ body {
   border-radius: 15px;
 }
 
-/*Title block styling////////////////////////////////////////////////////////*/
+/* Title block styling ////////////////////////////////////////////////////////*/
 #header-box {
   margin-left: auto;
   margin-right: auto;
@@ -106,7 +106,7 @@ body {
   font-size: 20px;
 }
 
-/*Nav bar styling////////////////////////////////////////////////////////////*/
+/* Nav bar styling ////////////////////////////////////////////////////////////*/
 #top-nav {
   margin-left: auto;
   margin-right: auto;
@@ -143,9 +143,9 @@ body {
 #top-nav a:hover {
   text-shadow: 0px 0px 8px #52B1CF;
 }
-/*Main body content styling//////////////////////////////////////////////////////////*/
-/*Home page------------------------------------------*/
-/*Comic nav*/
+/* Main body content styling //////////////////////////////////////////////////////////*/
+/* Home page ------------------------------------------*/
+/* Comic nav */
 #comic-nav {
   margin-left: 40px;
   padding-top: 10px;
@@ -193,7 +193,7 @@ body {
   width: 100%;
   border-style: solid;
 }
-/*Archive----------------------------------------------*/
+/* Archive ----------------------------------------------*/
 #comic-list {
   padding: 0.00000001px;
   list-style-type: none;
@@ -210,7 +210,7 @@ body {
 #comic-list a:hover {
   text-decoration: underline;
 }
-/*Projects---------------------------------------------*/
+/* Projects ---------------------------------------------*/
 /* Page structure */
 .project-title {
   padding: 14px 10px 10px 10px;
@@ -265,7 +265,6 @@ body {
   from {max-height:1px; visibility: none;}
   to {max-height:320vh; visibility: visible;}
 }
-
 /* Project 1 - Makrall Comic */
 #project1 .crossout {
   text-decoration: line-through;
@@ -308,8 +307,7 @@ body {
   border-style: solid;
   border-width: 1.5px;
 }
-
-/*All--------------------------------------------------*/
+/* All projects */
 .project-description p {
   margin: 0;
   line-height: 25px;
@@ -349,17 +347,59 @@ body {
   border-radius: 100%;
   box-shadow: 0px 0px 4px white;
 }
-
-/* Text------------------------------------ */
+/* Contact */
+/* Nothing here for now */
+/* About */
+.about-text h1 {
+  margin-bottom: 0px;
+}
+.about-text p {
+  margin-left: 10px;
+}
+#cast-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 10px;
+}
+.cast-img {
+  float:left;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 30%;
+  height: auto;
+}
+.cast-img img {
+  max-height: 100%;
+  max-width: 100%;
+  border-radius: 12px;
+  border-style: solid;
+  border-width: 1.5px;
+  background-color: #BFF0FF;
+}
+.img-dark img {
+  background-color: #92ADD1;
+}
+.cast-description {
+  float:left;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  width: 70%;
+  height: auto;
+}
+/* All pages text ------------------------------------ */
 #text {
+  padding: 0 20px 20px 20px;
+}
+.align-left {
+  text-align: left;
+}
+.align-center {
   text-align: center;
-  padding: 0 30px 20px 30px;
 }
 h1 {
   font-size: 30px;
 }
-
-/*Media Queries//////////////////////////////////////////////////////////////*/
+/* Media Queries //////////////////////////////////////////////////////////////*/
 @media (max-width: 720px) {
   .content-box {
     width: 100%;
