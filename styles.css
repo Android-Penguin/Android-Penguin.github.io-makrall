@@ -374,10 +374,10 @@ body {
   border-radius: 12px;
   border-style: solid;
   border-width: 1.5px;
-  background-color: #BFF0FF;
+  background-color: /*#52B1CF;*/#BFF0FF;
 }
 .img-dark img {
-  background-color: #92ADD1;
+  background-color: /*#2E5CB9;*/#92ADD1;
 }
 .cast-description {
   float:left;
