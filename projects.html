@@ -90,6 +90,8 @@
           <p>Creator: Emily M <br>
             Description: I'm not entirely sure what to put here.</p>
           <br>
+          <!-- Items inserted by script -->
+        </div>
       </section>
 
       <div id="modal" onclick="modalClose()">
@@ -115,6 +117,7 @@
   </script>
 
   <!-- Create picture divs -->
+  <!-- We Dem Kois -->
   <script src="album_list.js"></script>
   <script>
     for(item of album_list) {
@@ -129,6 +132,25 @@
       var container = document.getElementById("project2");
       container.appendChild(div);
     }
+  </script>
+  <!-- Art -->
+  <script src="art_list.js"></script>
+  <script>
+    for(item of art_list) {
+      var div = document.createElement("div");
+      var img = document.createElement("img");
+      img.src = item.filepath;
+      img.alt = item.name;
+      img.title = item.name;
+      img.id = item.id;
+      img.setAttribute('onclick', item.onclick);
+      div.appendChild(img);
+      var container = document.getElementById("project3");
+      container.appendChild(div);
+    }
+    var emptydiv = document.createElement("div");
+    emptydiv.style.height = "50px";
+    document.getElementById("project3").appendChild(emptydiv);
   </script>
   <!-- Modal Box -->
   <script>
