@@ -6,7 +6,7 @@ var comic_list = [
     "hoverText":"Yum"},
 
   {"filepath":"comics/comic_03.png", "title":"Outside Your Window", "date":"17/04/20",
-    "hoverText":"Who cares about the house, I'm more intrested in that lamp"},
+    "hoverText":"Who cares about the house, I'm more interested in that lamp"},
 
   {"filepath":"comics/comic_04.png", "title":"Iced Animals", "date":"17/04/20",
     "hoverText":"I imagined them as animal shaped ice blocks"}
