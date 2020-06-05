@@ -11,11 +11,11 @@
   <link rel="shortcut icon" href="ui_images/websiteicon.ico">
 </head>
 
-<!--Body of website-->
+<!-- Body of website -->
 <body onload="initialize()">
   <div class="flex-container">
     <div id="center-column" style="order: 2">
-      <!--Title box-->
+      <!-- Title box -->
       <header class="content-box">
         <div id="header-box">
           <div id="title">
@@ -27,7 +27,7 @@
         </div>
       </header>
 
-      <!--Navigation box-->
+      <!-- Navigation box -->
       <section class="content-box">
         <div id="top-nav">
           <ul>
@@ -44,11 +44,12 @@
         </div>
       </section>
 
-      <!--Main content box-->
+      <!-- Main content box -->
       <section class="content-box">
         <img id="toggle-button" src="ui_images/toggle_black.png" alt="dark mode toggle"
           onclick="darkToggle()" title="Click to toggle dark mode">
 
+        <!-- Background to Makrall -->
         <div id="text" class="about-text">
           <h1>What is Makrall?</h1>
           <p>Makrall began as a simple group chat on Instagram. Over time,
@@ -63,6 +64,8 @@
             Fortunately, there still remains a backlog of screenshots from Instagram, which
             will be converted into comic form sometime in the near future.</p>
 
+          <!-- Bios of people in Makrall with character pics that
+          change frame on mouse hover. -->
           <h1>Meet the cast</h1>
           <div id="cast-container">
             <div class="cast-img">
@@ -115,6 +118,7 @@
             </div>
           </div>
 
+          <!-- Credits to images used -->
           <h1>Credits</h1>
           <p>Resources Used:</p>
           <ul>
@@ -144,12 +148,15 @@
 
   <!-- Change pic -->
   <script>
+  /* Function is called by hovering mouse over/away from character
+  images. Passes function parameters of the ID of the image and the
+  souce the image needs to be changed to. */
     function changePic(picID, source) {
       picID.src = source;
     }
   </script>
 
-  <!--Dark mode script-->
+  <!-- Dark mode script -->
   <script>
     var state= "light";
     function darkToggle() {

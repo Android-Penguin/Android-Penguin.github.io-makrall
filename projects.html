@@ -11,11 +11,11 @@
   <link rel="shortcut icon" href="ui_images/websiteicon.ico">
 </head>
 
-<!--Body of website-->
+<!-- Body of website -->
 <body onload="initialize()">
   <div class="flex-container">
     <div id="center-column" style="order: 2">
-      <!--Title box-->
+      <!-- Title box -->
       <header class="content-box">
         <div id="header-box">
           <div id="title">
@@ -27,7 +27,7 @@
         </div>
       </header>
 
-      <!--Navigation box-->
+      <!-- Navigation box -->
       <section class="content-box">
         <div id="top-nav">
           <ul>
@@ -44,8 +44,8 @@
         </div>
       </section>
 
-      <!--Main content box-->
-      <section class="content-box">
+      <!-- Main content -->
+      <section class="content-box"> <!-- Collapsing containter project 1 -->
         <img id="toggle-button" src="ui_images/toggle_black.png" alt="dark mode toggle"
           onclick="darkToggle()" title="Click to toggle dark mode">
 
@@ -67,7 +67,7 @@
           </div>
       </section>
 
-      <section class="content-box">
+      <section class="content-box"> <!-- Collapsing containter project 2 -->
         <div class="project-title"> <!-- We Dem Kois -->
           <img id="p2button" src="ui_images/button_index.png" alt="Dropdown"
           class="div-dropdown" onclick="expandDiv(project2, p2button)">
@@ -81,7 +81,7 @@
         </div>
       </section>
 
-      <section class="content-box">
+      <section class="content-box"> <!-- Collapsing containter project 3 -->
         <div class="project-title"> <!-- Art -->
           <img id="p3button" src="ui_images/button_index.png" alt="Dropdown"
           class="div-dropdown" onclick="expandDiv(project3, p3button)">
@@ -94,6 +94,8 @@
         </div>
       </section>
 
+      <!-- Modal box that shows an enlarged version of
+      selected image on top of content -->
       <div id="modal" onclick="modalClose()">
         <div id="modal-img-container">
           <img id="modal-img" src="we_dem_kois/01_bath_oat.png" alt="Opened Image">
@@ -120,6 +122,9 @@
   <!-- We Dem Kois -->
   <script src="album_list.js"></script>
   <script>
+  /* Goes through each item in the array and creates a div
+  with the image and metadate. Each newly created item
+  is then added to the flexbox div for We Dem Kois. */
     for(item of album_list) {
       var div = document.createElement("div");
       var img = document.createElement("img");
@@ -136,6 +141,9 @@
   <!-- Art -->
   <script src="art_list.js"></script>
   <script>
+  /* Goes through each item in the array and creates a div
+  with the image and metadate. Each newly created item
+  is then added to the flexbox div for Digital Art. */
     for(item of art_list) {
       var div = document.createElement("div");
       var img = document.createElement("img");
@@ -148,22 +156,29 @@
       var container = document.getElementById("project3");
       container.appendChild(div);
     }
+    // Creates short empty div for spacing at the end of project 3 content
     var emptydiv = document.createElement("div");
     emptydiv.style.height = "50px";
     document.getElementById("project3").appendChild(emptydiv);
+
   </script>
   <!-- Modal Box -->
   <script>
+  /* Function is called by clicking on an image, which passes
+  it's filepath as a function argument. The function makes the
+  modal box visible and sets the image to the given source. */
     function modalOpen(selectedItem) {
       document.getElementById("modal").style.display = "block";
       document.getElementById("modal-img").src = selectedItem;
     }
+  // Closes modal box when 'x' button or box is clicked
     function modalClose() {
       document.getElementById("modal").style.display = "none";
     }
   </script>
   <!-- Expand divs -->
   <script>
+  // Toggles animation class on collapsing divs which expands/closes them
     function expandDiv(selectedDiv, selectedButton) {
       selectedDiv.classList.toggle("hidden");
       selectedDiv.classList.toggle("expand-animation");
@@ -172,7 +187,7 @@
     }
   </script>
 
-  <!--Dark mode script-->
+  <!-- Dark mode script -->
   <script>
     var state= "light";
     function darkToggle() {

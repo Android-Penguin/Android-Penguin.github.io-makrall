@@ -11,11 +11,11 @@
   <link rel="shortcut icon" href="ui_images/websiteicon.ico">
 </head>
 
-<!--Body of website-->
+<!-- Body of website -->
 <body onload="initialize()">
   <div class="flex-container">
     <div id="center-column" style="order: 2">
-      <!--Title box-->
+      <!-- Title box -->
       <header class="content-box">
         <div id="header-box">
           <div id="title">
@@ -27,7 +27,7 @@
         </div>
       </header>
 
-      <!--Navigation box-->
+      <!-- Navigation box -->
       <section class="content-box">
         <div id="top-nav">
           <ul>
@@ -44,11 +44,13 @@
         </div>
       </section>
 
-      <!--Main content box-->
+      <!-- Main content box -->
       <section class="content-box">
+        <!-- Dark mode button -->
         <img id="toggle-button" src="ui_images/toggle_black.png" alt="dark mode toggle"
           onclick="darkToggle()" title="Click to toggle dark mode">
 
+        <!-- Comic navigation -->
         <div id="comic-nav" class="flex-container">
           <div class="img-invert"><img src="ui_images/button_skip.png" alt="First"
             class="comic-skip" onclick="comicFirst()"></div>
@@ -61,10 +63,12 @@
             class="comic-skip" onclick="comicLatest()"></div>
         </div>
 
+        <!-- Comic image -->
         <div id="comic-container">
           <img id="comic-img" src="comics/comic_placeholder.png" alt="comic">
         </div>
 
+        <!-- Welcome text -->
         <div id=text class="align-center">
           <h4>Welcome to Makrall</h4>
           <p>I was originally going to add an explanation to each comic, but that would defeat
@@ -74,6 +78,7 @@
         </div>
       </section>
     </div>
+    <!-- Speech bubble background images -->
     <div id="left-column" class="sidebar" style="order: 1"><img src="ui_images/speech_bubble.png" alt="speech bubble" class="side-bubble"></div>
     <div id="right-column" class="sidebar" style="order: 3"><img src="ui_images/speech_bubble.png" alt="speech bubble" class="side-bubble"></div>
   </div>
@@ -83,13 +88,17 @@
   <script>
     var current_comic;
     function initialize() {
-        /*Dark state*/
+        // Initialize dark state
         storage = window.localStorage;
+        /* Switches website to dark mode if user previously had
+        it turned on. */
         if(storage.getItem("makrallDarkState") == "dark") {
           darkToggle();
         }
-        /*Comic set*/
+        // Set comic from URL
         const params = new URLSearchParams(window.location.search);
+        /* Sets comic specified by the URL if search parameters
+        are present and valid. */
         if(params.has('id')) {
           if(parseInt(params.get('id'))>-1 && parseInt(params.get('id'))<comic_list.length) {
             current_comic = parseInt(params.get('id'));
@@ -99,6 +108,7 @@
         } else {
           current_comic = comic_list.length-1;
         }
+        // Search parameter easter egg. (Add ?text= to end of url)
         if(params.has('text')) {
           window.alert("Click home to reset comic");
           document.getElementById("comic-title").innerHTML = params.get('text');
@@ -110,7 +120,8 @@
 
   <!-- Comic switching -->
   <script>
-
+    /* Spefifies how the comic should be indexed.
+    (Latest, first, next or previous) */
     function comicLatest() {
       current_comic = comic_list.length-1;
       setComic();
@@ -131,7 +142,8 @@
         setComic();
       }
     }
-
+    /* Changes comic by altering the attributes of the current image
+    (Filepath, hover text and comic title) */
     function setComic() {
       const image = comic_list[current_comic].filepath;
       const hoverText = comic_list[current_comic].hoverText;
@@ -142,17 +154,18 @@
     }
   </script>
 
-  <!--Dark mode script-->
+  <!-- Dark mode script -->
   <script>
-    var state= "light";
+    var state= "light"; // Default state is light
     function darkToggle() {
+      // Background colour change
       document.body.classList.toggle("dark-background");
-      //Content boxes
+      // Content box background and outline colour change
       var boxes = document.getElementsByClassName("content-box");
       for(item of boxes) {
         item.classList.toggle("dark-content-box");
       }
-      //Speech bubble icons
+      // Changes speech bubble files between light and dark
       var bubbles = document.getElementsByClassName("side-bubble");
       for(item of bubbles) {
         if(state=="light") {
@@ -161,7 +174,7 @@
           item.src = "ui_images/speech_bubble.png";
         }
       }
-      //Comic nav buttons
+      // Changed comic index button files between light and dark
       var indexIcons = document.getElementsByClassName("comic-index");
       for (item of indexIcons) {
         item.classList.toggle("dark-hover");
@@ -180,7 +193,7 @@
           item.src = "ui_images/button_skip.png";
         }
       }
-      //Toggle icon
+      // Changes toggle button file between light and dark
       if(state == "light") {
         document.getElementById("toggle-button").src = "ui_images/toggle_white.png"
         state = "dark";
@@ -188,6 +201,7 @@
         document.getElementById("toggle-button").src = "ui_images/toggle_black.png"
         state = "light";
       }
+      // Stores dark mode state in browser's local storage
       storage.setItem("makrallDarkState", state);
     }
   </script>
