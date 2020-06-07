@@ -16,4 +16,10 @@ var art_list = [
 
   {"filepath":"digital_art/art08.png", "name":"Lost Quality",
     "id":"art08", "onclick":"modalOpen('digital_art/art08.png')"},
+
+  {"filepath":"digital_art/art09.png", "name":"It's a Nothing",
+    "id":"art09", "onclick":"modalOpen('digital_art/art09.png')"},
+
+  {"filepath":"digital_art/art10.png", "name":"Horticulture",
+    "id":"art10", "onclick":"modalOpen('digital_art/art10.png')"},
 ];
