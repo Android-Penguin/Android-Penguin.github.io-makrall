@@ -21,5 +21,8 @@ var album_list = [
     "id":"album07", "onclick":"modalOpen('we_dem_kois/07_rice_lamp.png')"},
 
   {"filepath":"we_dem_kois/08_glass_leaf.png", "name":"Glass Leaf",
-    "id":"album080", "onclick":"modalOpen('we_dem_kois/08_glass_leaf.png')"}
+    "id":"album08", "onclick":"modalOpen('we_dem_kois/08_glass_leaf.png')"},
+
+  {"filepath":"we_dem_kois/09_easel_grass.png", "name0":"Easel Grass",
+    "id":"album09", "onclick":"modalOpen('we_dem_kois/09_easel_grass.png')"}
 ];

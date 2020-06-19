@@ -22,4 +22,7 @@ var art_list = [
 
   {"filepath":"digital_art/art10.png", "name":"Horticulture",
     "id":"art10", "onclick":"modalOpen('digital_art/art10.png')"},
+
+  {"filepath":"digital_art/art11.png", "name":"Just Egg",
+    "id":"art11", "onclick":"modalOpen('digital_art/art11.png')"}
 ];
