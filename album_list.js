@@ -24,5 +24,9 @@ var album_list = [
     "id":"album08", "onclick":"modalOpen('we_dem_kois/08_glass_leaf.png')"},
 
   {"filepath":"we_dem_kois/09_easel_grass.png", "name0":"Easel Grass",
-    "id":"album09", "onclick":"modalOpen('we_dem_kois/09_easel_grass.png')"}
+    "id":"album09", "onclick":"modalOpen('we_dem_kois/09_easel_grass.png')"},
+
+  {"filepath":"we_dem_kois/10_mountains_of_glass.png", "name0":"Mountains of Glass",
+    "id":"album010", "onclick":"modalOpen('we_dem_kois/10_mountains_of_glass.png')"}
+
 ];
