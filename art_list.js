@@ -24,5 +24,8 @@ var art_list = [
     "id":"art10", "onclick":"modalOpen('digital_art/art10.png')"},
 
   {"filepath":"digital_art/art11.png", "name":"Just Egg",
-    "id":"art11", "onclick":"modalOpen('digital_art/art11.png')"}
+    "id":"art11", "onclick":"modalOpen('digital_art/art11.png')"},
+
+  {"filepath":"digital_art/art12.png", "name":"Girl in the Clouds",
+    "id":"art12", "onclick":"modalOpen('digital_art/art12.png')"},
 ];
