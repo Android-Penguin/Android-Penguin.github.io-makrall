@@ -96,6 +96,10 @@ body {
   margin: 0;
   font-size: 60px;
 }
+#title a {
+  color: inherit;
+  text-decoration: none;
+}
 #site-description {
   float:right;
   padding-top: 24px;
